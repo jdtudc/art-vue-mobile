@@ -39,7 +39,7 @@ Vue.use(artm)
 
 ## Contribute
 
-- [Contribute](https://github.com/artFE/art-vue-mobile/blob/master/CONTRIBUTE.md)
+[Contribute](https://github.com/artFE/art-vue-mobile/blob/master/CONTRIBUTE.md)
 
 ## Changelog
 
@@ -47,4 +47,4 @@ Vue.use(artm)
 
 ## License
 
-[MIT](http://git.jd.com/udc-public/jrv/blob/master/develop/jrv-vue/src/LICENSE.md)
+[MIT](https://github.com/artFE/art-vue-mobile/blob/master/LICENSE.md)
