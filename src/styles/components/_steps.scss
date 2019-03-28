@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import
+    "../common/var",
+    "../common/mixin";
+
+.artm-steps { width: 100%; height: 100%;
+    .artm-step { position: relative;
+        &-line { display: block; position: absolute; background-color: $borderColor;
+            &:after { content: ""; display: block; background-color: $blue; transition: all $animateTime ease-out;}
+        }
+        &-icon { position: relative; display: inline-block; vertical-align: top; width: 26px; height: 26px; border: 2px solid $remark; box-sizing: border-box; border-radius: 50%; text-align: center; line-height: 22px; font-size: $sizeNormal; color: $main;}
+        &-content { position: relative; display: inline-block;
+            .artm-step-title { font-size: $sizeNormal; color: $main;}
+            .artm-step-desc { font-size: $sizeSmall; color: $main; line-height: 1.5;}
+        }
+        &:last-child {
+            .artm-step-line { display: none;}
+        }
+    }
+    .artm-step_active {
+        .artm-step-icon { color: $white; border: 2px solid $blue; background: $blue;}
+        .artm-step-content {
+            .artm-step-title { color: $mainStrong;}
+        }
+    }
+    .artm-step_finish {
+        .artm-step-icon { border: 2px solid $blue; background: url("//storage.jd.com/static-res/tech/jrv/1.0.0/steps/finish.png") no-repeat center center; background-size: 12px 9px;}
+        .artm-step-content {
+            .artm-step-title { color: $main;}
+        }
+    }
+}
+.artm-steps_horizontal { display: flex; flex-wrap: nowrap;
+    .artm-step { flex: 1; width: 0;
+        &-icon { display: block; margin: 0 auto;}
+        &-content { display: block; padding: 0 10px;
+            .artm-step-title { text-align: center; margin-top: 6px; line-height: 21px;}
+            .artm-step-desc { text-align: center; margin-top: 3px;}
+        }
+        &-line { left: 50%; margin-left: 12px; top: 12px; width: calc(100% - 24px); height: 2px;
+            &:after { width: 0; height: 100%;}
+        }
+    }
+    .artm-step_finish {
+        .artm-step-line {
+            &:after { width: 100%;}
+        }
+    }
+}
+.artm-steps_vertical {
+    .artm-step { width: 100%;
+        &-line { left: 12px; top: 31px; bottom: 5px; width: 2px;
+            &:after { width: 100%; height: 0;}
+        }
+        &-content { min-height: 48px; padding: 0 10px;
+            .artm-step-title { line-height: 26px;}
+            .artm-step-desc { padding-bottom: 12px;}
+        }
+    }
+    .artm-step_finish {
+        .artm-step-line {
+            &:after { height: 100%;}
+        }
+    }
+}

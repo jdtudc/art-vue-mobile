@@ -1,0 +1,23 @@
+@charset "utf-8";
+@import
+    "../common/var",
+    "../common/mixin",
+    "../animation/_actionsheet";
+
+.artm-actionsheet {
+    &-cont { position: fixed; left: 0; bottom: 0; width: 100%; background-color: $bg; backface-visibility: hidden; line-height: 1.6; text-align: center; z-index: $z-index-actionsheet;}
+    &-title { position: relative; background-color: $white; padding: 10px 0;
+        &:after { @include border-bottom($borderColor);}
+        .title { font-size: $sizeLarge; color: $mainStrong;}
+        .tips { font-size: $sizeSmall; color: $main;}
+    }
+    &-menus { background-color: $white;}
+    &-menu { position: relative; padding: 10px 0; font-size: $sizeLarge; color: $mainStrong;
+        &_disabled { color: $mainWeak; cursor: not-allowed;}
+    }
+    &-menu + &-menu {
+        &:before { @include border-top($borderColor);}
+    }
+    &-actions { background-color: $white; margin-top: 6px;}
+    &-action { padding: 10px 0; font-size: $sizeLarge; color: $mainStrong;}
+}

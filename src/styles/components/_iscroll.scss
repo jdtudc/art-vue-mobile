@@ -1,0 +1,8 @@
+@charset "utf-8";
+@import
+    "../common/var",
+    "../common/mixin";
+
+.artm-iscroll { position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden;
+    &-wrapper { position: relative;}
+}

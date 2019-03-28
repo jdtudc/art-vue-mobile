@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+@mixin lm {
+  display: -webkit-box;
+  -webkit-box-pack: start;
+  box-pack: start;
+  -webkit-box-align: center;
+  box-align: center;
+}
+@mixin mm {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -webkit-box-align: center;
+  box-align: center;
+}
+@mixin rm {
+  display: -webkit-box;
+  -webkit-box-pack: end;
+  box-pack: end;
+  -webkit-box-align: center;
+  box-align: center;
+}
+@mixin border-top($color, $left: 0, $width: 1px, $style: solid) {
+  content: '';
+  position: absolute;
+  left: $left;
+  top: 0;
+  right: 0;
+  height: $width;
+  border-top: $width $style $color;
+  @if $width == 1px {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    pointer-events: none;
+  }
+}
+@mixin border-bottom($color, $left: 0, $width: 1px, $style: solid) {
+  content: '';
+  position: absolute;
+  left: $left;
+  bottom: 0;
+  right: 0;
+  height: $width;
+  border-top: $width $style $color;
+  display: block;
+  @if $width == 1px {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    pointer-events: none;
+  }
+}
+@mixin border-left($color, $width: 1px, $style: solid) {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: $width;
+  height: 100%;
+  display: block;
+  border-left: $width $style $color;
+  @if $width == 1px {
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    pointer-events: none;
+  }
+}
+@mixin border-right($color, $width: 1px, $style: solid) {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: $width;
+  height: 100%;
+  border-right: $width $style $color;
+  @if $width == 1px {
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    pointer-events: none;
+  }
+}
+
+@mixin border($color, $style: solid) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  border: 1px $style $color;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  pointer-events: none;
+}

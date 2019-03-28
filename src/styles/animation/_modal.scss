@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.modal-scale-in-enter-active, .modal-scale-in-leave-active {
+    transition: all 0.3s ease-out;
+}
+.modal-scale-in-enter {
+    transform: translate(-50%, -50%) scale(1.14)!important;
+    opacity: 0;
+}
+.modal-scale-in-leave-to {
+    transform: translate(-50%, -50%) scale(0.87)!important;
+    opacity: 0;
+}
+
+.modal-fade-enter-active, .modal-fade-leave-active {
+    transition: all 0.3s ease-out;
+}
+.modal-fade-enter, .modal-fade-leave-to {
+    opacity: 0;
+}

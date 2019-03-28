@@ -1,0 +1,273 @@
+[
+  {
+    "name": "Basic",
+    "list": [
+      {
+        "name_en": "Button",
+        "name": "按钮",
+        "path": "/button",
+        "online": true
+      },
+      {
+        "name_en": "Color",
+        "name": "色彩",
+        "path": "/color",
+        "online": true
+      },
+      {
+        "name_en": "Icon",
+        "name": "图标",
+        "path": "/icon",
+        "online": true
+      },
+      {
+        "name_en": "Layout",
+        "name": "布局",
+        "path": "/layout",
+        "online": true
+      }
+    ],
+    "expand": false
+  },
+  {
+    "name": "Form",
+    "list": [
+      {
+        "name_en": "AddrPicker",
+        "name": "地址选择",
+        "path": "/addrPicker",
+        "online": true
+      },
+      {
+        "name_en": "Calendar",
+        "name": "日历",
+        "path": "/calendar",
+        "online": true
+      },
+      {
+        "name_en": "Checkbox",
+        "name": "多选框",
+        "path": "/checkbox",
+        "online": true
+      },
+      {
+        "name_en": "Countdown",
+        "name": "倒计时",
+        "path": "/countdown",
+        "online": true
+      },
+      {
+        "name_en": "DatePicker",
+        "name": "时间选择",
+        "path": "/datePicker",
+        "online": true
+      },
+      {
+        "name_en": "Input",
+        "name": "输入框",
+        "path": "/input",
+        "online": true
+      },
+      {
+        "name_en": "List",
+        "name": "列表",
+        "path": "/list",
+        "online": true
+      },
+      {
+        "name_en": "Radio",
+        "name": "单选框",
+        "path": "/radio",
+        "online": true
+      },
+      {
+        "name_en": "Slider",
+        "name": "滑块",
+        "path": "/slider",
+        "online": true
+      },
+      {
+        "name_en": "Switch",
+        "name": "开关",
+        "path": "/switch",
+        "online": true
+      },
+      {
+        "name_en": "Textarea",
+        "name": "多行文本输入框",
+        "path": "/textarea",
+        "online": true
+      },
+      {
+        "name_en": "Uploader",
+        "name": "上传器",
+        "path": "/uploader",
+        "online": true
+      }
+    ],
+    "expand": false
+  },
+  {
+    "name": "View",
+    "list": [
+      {
+        "name_en": "Actionsheet",
+        "name": "操作反馈",
+        "path": "/actionsheet",
+        "online": true
+      },
+      {
+        "name_en": "Alert",
+        "name": "警告提示",
+        "path": "/alert",
+        "online": true
+      },
+      {
+        "name_en": "Badge",
+        "name": "徽标数",
+        "path": "/badge",
+        "online": true
+      },
+      {
+        "name_en": "IScroll",
+        "name": "内部滚动",
+        "path": "/iscroll",
+        "online": true
+      },
+      {
+        "name_en": "Mask",
+        "name": "遮罩层",
+        "path": "/mask",
+        "online": true
+      },
+      {
+        "name_en": "Modal",
+        "name": "对话框",
+        "path": "/modal",
+        "online": true
+      },
+      {
+        "name_en": "Popup",
+        "name": "弹出",
+        "path": "/popup",
+        "online": true
+      },
+      {
+        "name_en": "Swiper",
+        "name": "轮播",
+        "path": "/swiper",
+        "online": true
+      },
+      {
+        "name_en": "Tag",
+        "name": "标签",
+        "path": "/tag",
+        "online": true
+      },
+      {
+        "name_en": "Toast",
+        "name": "提示",
+        "path": "/toast",
+        "online": true
+      }
+    ],
+    "expand": false
+  },
+  {
+    "name": "Navigation",
+    "list": [
+      {
+        "name_en": "Drawer",
+        "name": "抽屉",
+        "path": "/drawer",
+        "online": true
+      },
+      {
+        "name_en": "Steps",
+        "name": "步骤条",
+        "path": "/steps",
+        "online": true
+      },
+      {
+        "name_en": "Tabs",
+        "name": "标签页",
+        "path": "/tabs",
+        "online": true
+      }
+    ],
+    "expand": false
+  },
+  {
+    "name": "Chart",
+    "list": [
+      {
+        "name_en": "Line",
+        "name": "线性图",
+        "path": "/line"
+      },
+      {
+        "name_en": "Bar",
+        "name": "柱状图",
+        "path": "/bar"
+      },
+      {
+        "name_en": "Pie",
+        "name": "饼图",
+        "path": "/pie"
+      },
+      {
+        "name_en": "Radar",
+        "name": "雷达图",
+        "path": "/radar"
+      }
+    ],
+    "expand": false
+  },
+  {
+    "name": "Combination",
+    "list": [
+      {
+        "name_en": "InfiniteScroll",
+        "name": "无限滚动",
+        "path": "/infiniteScroll",
+        "online": true
+      },
+      {
+        "name_en": "Result",
+        "name": "结果页",
+        "path": "/result"
+      }
+    ],
+    "expand": false
+  },
+  {
+    "name": "Other",
+    "list": [
+      {
+        "name_en": "LoadingBar",
+        "name": "加载进度条",
+        "path": "/loadingBar",
+        "online": true
+      },
+      {
+        "name_en": "Loading",
+        "name": "加载指示器",
+        "path": "/loading",
+        "online": true
+      },
+      {
+        "name_en": "Loadmore",
+        "name": "加载更多",
+        "path": "/loadmore",
+        "online": true
+      },
+      {
+        "name_en": "Description",
+        "name": "详细说明",
+        "path": "/description",
+        "online": true
+      }
+    ],
+    "expand": false
+  }
+]

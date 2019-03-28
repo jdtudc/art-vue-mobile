@@ -1,0 +1,17 @@
+@charset "utf-8";
+@import
+"../common/var",
+"../common/mixin";
+
+.artm-slider { position: relative; box-sizing: border-box; display: flex; align-items: center; height: 20px;
+  &-info { font-size: $sizeSmall; color: $mainStrong;}
+  &-min { text-align: left; padding-right: 15px;}
+  &-max { text-align: right; padding-left: 15px}
+  &-inner { position: relative; flex: 1; width: 0; height: 2px; background-color: $bg; border-radius: $borderRadius;}
+  &-track { position: relative; height: 100%; border-radius: $borderRadius; width: 0; background-color: $blue;}
+  &-handler { position: absolute; left: 0; top: 50%; margin-top: -10px; margin-left: -10px; width: 20px; height: 20px; border-radius: 10px; background-color: $white; border: 1px solid $darkBg; box-shadow: 0 2px 4px 0 $bg;}
+  &_disabled { cursor: not-allowed;
+    .artm-slider-track { background-color: $blueDisabled;}
+    .artm-slider-info { color: $mainWeak;}
+  }
+}

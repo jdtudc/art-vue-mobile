@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import
+  "../common/var",
+  "../common/mixin";
+
+.artm-switch { position: relative; display: block; min-width: 48px; height: 24px; box-sizing: border-box; padding: 0 9px; border-radius: 12px; background-color: $remark; transition: all $animateTime ease-out; cursor: pointer; text-align: right;
+  &-inner { font-size: $sizeSmall; color: $white; line-height: 24px;}
+  &:after { content: ""; position: absolute; left: 2px; top: 50%; margin-top: -9px; display: block; width: 18px; height: 18px; border-radius: 50%; background-color: $white; box-shadow: 0 1px 3px 0 #a6abb7; transition: left $animateTime ease-out;}
+  &_active { background-color: $blue; text-align: left;
+    &:after { left: 27px;}
+  }
+  &_disabled { opacity: 0.6; cursor: not-allowed;}
+}

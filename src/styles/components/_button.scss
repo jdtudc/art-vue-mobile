@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import
+    "../common/var",
+    "../common/mixin";
+
+$buttonPrefix: "#{$proPrefix}button";
+.#{$buttonPrefix} { position: relative; display: block; width: 100%; color: #fff; background-color: $blue; height: 32px; padding: 0 15px; outline: none; box-sizing: border-box; transition: all $animateTime; border-radius: $borderRadius; overflow: hidden; cursor: pointer; border: none; @include mm(); align-items: center;
+    &:after { @include border($blue); border-radius: 2 * $borderRadius;}
+
+    // 三种状态 悬浮、激活和禁用状态
+    &:active { background-color: $blueDark;}
+    // 禁用状态
+    &.#{$buttonPrefix}_disabled { cursor: not-allowed; background-color: $blueDisabled;
+        &:after { @include border($blueDisabled);}
+    }
+
+    // 五种样式 ，默认蓝底白字，带框黑字、无框黑字、+白框白字透明底 + 蓝框蓝字
+    //灰框黑字
+    &.#{$buttonPrefix}_minor { color: $mainStrong; background-color: #fff;
+        &:after { @include border($borderColor);}
+        &:active { background-color: $bg; box-shadow: 0 0 15px rgba(#000, .05) inset; }
+        &.#{$buttonPrefix}_disabled { color: $mainWeak; background-color: $bg;
+            &:after { display: none;}
+            &:active { box-shadow: none;}
+        }
+    }
+    // 蓝框蓝字
+    &.#{$buttonPrefix}_text { color: $main; background-color: transparent;
+        &:after { display: none;}
+        &:active { color: $main; background-color: transparent;}
+        &.#{$buttonPrefix}_disabled { color: $mainWeak; background-color: transparent;
+            &:active { background-color: transparent;}
+        }
+    }
+    // 白框白字透明底            
+    &.#{$buttonPrefix}_empty { color: #fff; background-color: transparent;
+        &:after { @include border(#fff);}
+        &:active { background-color: transparent;}
+        &.#{$buttonPrefix}_disabled { background-color: transparent;
+            &:active { background-color: transparent;}
+        }
+    }
+    // 蓝框蓝字
+    &.#{$buttonPrefix}_blue { color: $blue; background-color: transparent;
+        &:after { @include border($blue);}
+        &:active { background-color: $blue; color: #fff; box-shadow: 0 0 15px rgba(#000, .1) inset; }
+        &.#{$buttonPrefix}_disabled { color: $mainWeak; background-color: $bg;
+            &:after { @include border($bg);}
+            &:active { background-color: $bg; box-shadow: none;}
+        }
+    }
+    // 无边框
+    &.#{$buttonPrefix}_nobor {
+        &:after { display: none;}
+    }
+    // 红色按钮
+    &.#{$buttonPrefix}_red { color: #fff; background-color: $red;
+        &:after { @include border($red);}
+        &:active { background-color: $redDark; box-shadow: 0 0 15px rgba(#000, .1) inset; }
+        &.#{$buttonPrefix}_disabled { cursor: not-allowed; background-color: $redDisabled;
+            &:after { @include border($redDisabled);}
+            &:active { background-color: $redDisabled; box-shadow: none;}
+        }
+    }
+
+    // 大小尺寸
+    &.#{$buttonPrefix}_large { height: 40px; padding: 0 25px;
+        .#{$buttonPrefix}-text { font-size: 16px; }
+        .#{$buttonPrefix}-icon { max-width: 36px;}
+    }
+    &.#{$buttonPrefix}_small { height: 26px; padding: 0 10px;
+        .#{$buttonPrefix}-text { font-size: 12px; }
+        .#{$buttonPrefix}-icon { max-width: 22px;}
+    }
+
+    /**============================
+    子元素
+    ==============================*/
+    .#{$buttonPrefix}-text { display: block; font-size: 14px; white-space: nowrap; }
+    .#{$buttonPrefix}-icon { display: block; margin-right: 10px; width: auto; max-width: 28px;}
+}

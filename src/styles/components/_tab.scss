@@ -1,0 +1,9 @@
+@charset "utf-8";
+@import
+    "../common/var",
+    "../common/mixin";
+
+.artm-tab { flex: 1; width: 0; box-sizing: border-box; font-size: $sizeMedium; line-height: 44px; text-align: center; height: 44px;
+    &_disabled { color: $mainWeak; cursor: not-allowed;}
+    &_active { color: $blue;}
+}

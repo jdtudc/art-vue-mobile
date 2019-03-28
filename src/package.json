@@ -1,0 +1,30 @@
+{
+  "name": "art-vue-mobile",
+  "version": "0.1.0",
+  "description": "A component libraries for h5 development built on Vue 2.0.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artFE/art-vue-mobile.git"
+  },
+  "keywords": [
+    "vue",
+    "vue.js",
+    "library",
+    "component",
+    "art",
+    "mobile"
+  ],
+  "author": "McChen <mcchen.club@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artFE/art-vue-mobile/issues"
+  },
+  "homepage": "https://github.com/artFE/art-vue-mobile#readme"
+}

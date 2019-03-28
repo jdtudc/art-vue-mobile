@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6, input, textarea, select, button { font-size: 100%; font-weight: normal; }
+ul, ol { list-style-type: none; list-style-image: none; }
+li { list-style: none; }
+html, body { -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+a, img { -webkit-touch-callout: none; }
+a { text-decoration: none; color: #333; }
+a:active, a:hover { outline: 0 none; }
+a:focus { outerline: 1px dotted; }
+img { vertical-align: middle; }
+/**
+ * 防止所有浏览器中的<sub>和<sup>影响行高
+ * http://jsbin.com/usoyal/1/edit
+ */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+/**
+ * 中文优先使用冬青黑体简体(OS X)、微软雅黑(Windows)和文泉驿微米黑(Linux)
+ * 西文使用 tahoma
+ * 1. 防止元素中「font-family」不能继承
+ * 2. 西文字体和 OS X 字体写在前面
+ * 3. Opera 12.1 之前版本不支持中文字体的英文名称
+ * 4. 微软雅黑「\5FAE\8F6F\96C5\9ED1」,中易宋体「\5B8B\4F53」
+ */
+body,
+button, /* 1 */
+input, /* 1 */
+select, /* 1 */
+textarea /* 1 */
+{
+  font-family: 'helvetica neue', tahoma, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+}
+/**
+ * 1. 修正所有浏览器中字体不继承的问题
+ * 2. 修正所有浏览器中字号不继承的问题
+ * 3. 改善在所有浏览器下的垂直对齐方式
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 2 */
+  vertical-align: baseline; /* 3 */
+}
+/**
+ * 1. 移除 IE6-11 中默认的垂直滚动条
+ * 2. 统一所有浏览器中的垂直对齐以及增强文字可读性
+ * 3. 禁止水平拖动，防止破坏布局
+ */
+textarea {
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
+  resize: vertical; /* 3 */
+}
+/* ================================================================================
+                                                                                              1.2 html5 reset
+   ================================================================================ */
+section, article, aside, header, footer, nav, figure, menu { display: block; padding: 0; margin: 0; }
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 { -webkit-text-size-adjust: none; }
+input, button, select, textarea { outline: none; -webkit-appearance: none; /*修正ios下的默认阴影*/
+}
+input { border: none; }
+input:focus::-webkit-input-placeholder { color: #efefef; }
+/*
+* 页面字体初始大小设置
+*/
+html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; font-size: 62.5%; /* 10/16=62.5% */}
+/**
+ * 修正未定义为「block」的元素
+ */
+article, aside, figcaption, figure, footer, header, nav, section, summary { display: block; }
+/* ================================================================================
+                                                                                                  2.css工具类
+   ================================================================================ */
+/**
+ *  页面容器
+ */
+
+html, body { width: 100%; min-width: 320px; min-height: 100vh;}
+
+*, *:before, *:after { box-sizing: border-box; margin: 0; padding: 0;}
+
+body { font-size: 14px; line-height: 1;}
+.hidden { display: none!important;}
+.v-hidden { visibility: hidden!important;}
+.flex { display: flex;}
+.flex-item { flex: 1; width: 0;}
+
+
+
+
+
+
+
+
+
+

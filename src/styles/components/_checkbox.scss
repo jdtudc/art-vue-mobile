@@ -1,0 +1,31 @@
+@charset "utf-8";
+@import
+  "../common/var",
+  "../common/mixin";
+
+.artm-checkbox { position: relative; display: flex; align-items: center;
+  &-icon { position: relative; display: block; width: 18px; height: 18px; margin-right: 10px; box-sizing: border-box; border: 1px solid $remark; transition: all $animateTime;
+    &:after { content: ""; border: 2px solid #fff; border-left: 0; border-top: 0; top: 2px; left: 5px; position: absolute; width: 6px; height: 10px; transform: rotate(45deg); opacity: 0; box-sizing: border-box;}
+    &_circle { border-radius: 50%;
+      //&:after { content: ""; border: 2px solid #fff; border-left: 0; border-top: 0; top: 2px; left: 5px; position: absolute; width: 6px; height: 10px; transform: rotate(45deg); opacity: 0; box-sizing: border-box;}
+    }
+  }
+  &-cont { line-height: 1.5; flex: 1; width: 0;}
+  &-value { font-size: $sizeMedium; color: $mainStrong;}
+  &-desc { font-size: $sizeNormal; color: $main;}
+  &_disabled { cursor: not-allowed; opacity: 0.5;
+    .artm-checkbox-icon { background-color: $bg; border-color: $borderColor;
+    }
+  }
+  &_checked {
+    .artm-checkbox-icon { background-color: $blue; border-color: $blue;
+      &:after { opacity: 1; transition: all $animateTime;}
+    }
+    .artm-checkbox-value { color: $mainStrong;}
+    .artm-checkbox-desc { color: $main;}
+  }
+  &_reverse { flex-direction: row-reverse;
+    .artm-radio-icon { margin-left: 10px; margin-right: 0;}
+  }
+}
+

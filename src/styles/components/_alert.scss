@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import
+    "../common/var",
+    "../common/mixin",
+    "../animation/_alert";
+
+.artm-alert {
+    &-cont { position: fixed; left: 50%; top: 50%; width: 80%; max-width: 300px; background-color: $white; transform: translate(-50%, -50%); text-align: center; z-index: $z-index-alert; overflow: hidden; border-radius: $borderRadius; line-height: 1.6;}
+    &-header { position: relative; padding: 15px 15px 15px;
+        h4 { font-size: $sizeLarge; color: $mainStrong;}
+    }
+    &-body { position: relative; padding: 0 15px 15px;
+        p { font-size: $sizeNormal; color: $main;}
+    }
+    &-footer {
+        a { position: relative; display: block; padding: 10px; font-size: $sizeLarge; color: $blue;
+            &:before { @include border-top($borderColor);}
+        }
+    }
+}

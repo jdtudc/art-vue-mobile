@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import
+  "../common/var",
+  "../common/mixin";
+
+.artm-list { position: relative; width: 100%;
+  &-title { position: relative; font-size: $sizeNormal; color: $mainWeak; line-height: 20px; padding: $padding;}
+  &-cont { position: relative; background-color: $white;
+    &:before { @include border-top($borderColor);}
+    &:after { @include border-bottom($borderColor);}
+  }
+}

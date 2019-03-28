@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import
+    "../common/var",
+    "../common/mixin",
+    "../animation/_modal";
+
+.artm-modal {
+    &-cont { position: fixed; left: 50%; top: 50%; width: 80%; max-width: 300px; background-color: $white; transform: translate(-50%, -50%); text-align: center; z-index: $z-index-modal; overflow: hidden; border-radius: $borderRadius; line-height: 1.6;}
+    &-header { position: relative; padding: 15px 15px 15px;
+        h4 { font-size: $sizeLarge; color: $mainStrong;}
+    }
+    &-body { position: relative; padding: 0 15px 15px;
+        p { font-size: $sizeNormal; color: $main;}
+    }
+    &-footer { position: relative; display: flex; flex-wrap: wrap;
+        &:before { @include border-top($borderColor);}
+    }
+    &-btn { position: relative; display: block; padding: 10px; font-size: $sizeLarge; color: $blue; text-align: center;}
+    &-btn_weak { color: $mainWeak;}
+    &-btn_blue { color: $blue;}
+    &-btn.bdt { width: 100%;}
+    &-btn.bdt + &-btn.bdt {
+        &:before { @include border-top($borderColor);}
+    }
+    &-btn.bdl { width: 50%;}
+    &-btn.bdl + &-btn.bdl {
+        &:before { @include border-left($borderColor);}
+    }
+}

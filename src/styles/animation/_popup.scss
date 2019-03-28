@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.popup-enter-active, .popup-leave-active {
+    transition: transform 0.3s ease-out;
+}
+.popup-enter, .popup-leave-to {
+    transform: translateY(100%);
+}
+
+.popup-fade-enter-active, .popup-fade-leave-active {
+    transition: all 0.3s ease-out;
+}
+.popup-fade-enter, .popup-fade-leave-to {
+    opacity: 0;
+}

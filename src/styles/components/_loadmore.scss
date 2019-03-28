@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import
+    "../common/var",
+    "../common/mixin",
+    "../animation/_loadmore";
+
+.artm-loadmore { position: relative; height: 40px; @include mm();
+    &-icon { display: block; width: 17px; height: 17px;
+        &_loading { background: url("//storage.jd.com/static-res/tech/artm/icon-loading.png") no-repeat center center; background-size: 100%; animation: loadmore-rotate 1.2s linear infinite;}
+        &_none { background: url("//storage.jd.com/static-res/tech/artm/icon-none.png") no-repeat center center; background-size: 100%;}
+    }
+    &-tips { color: $mainWeak; font-size: $sizeSmall;}
+    &-icon + &-tips { margin-left: 7px;}
+}

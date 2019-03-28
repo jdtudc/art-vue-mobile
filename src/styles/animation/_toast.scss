@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.toast-middle-enter-active, .toast-middle-leave-active {
+  transition: opacity 0.3s
+}
+.toast-middle-enter, .toast-middle-leave-to {
+  opacity: 0
+}
+.toast-top-enter-active, .toast-top-leave-active, .toast-bottom-enter-active, .toast-bottom-leave-active {
+  transition: all 0.3s;
+}
+.toast-top-enter, .toast-top-leave-to, .toast-bottom-enter, .toast-bottom-leave-to {
+  transform: translate3d(-50%,0,0)!important;
+  opacity: 0;
+}
+
+.toast-scale-enter-active, .toast-scale-leave-active {
+  transition: all .3s;
+  transform-origin: 50% 50%;
+}
+.toast-scale-enter, .toast-scale-leave-to {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.4)!important;
+}

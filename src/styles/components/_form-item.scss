@@ -1,0 +1,11 @@
+@charset "utf-8";
+@import
+  "../common/var",
+  "../common/mixin";
+
+.artm-form-item {  position: relative; width: 100%; padding: 10px $padding; font-size: $sizeMedium; line-height: 1.5;
+  &:before { @include border-top($borderColor, $padding)}
+  &:first-child {
+    &:before { display: none;}
+  }
+}

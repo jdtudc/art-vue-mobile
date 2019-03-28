@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import
+  "../common/var",
+  "../common/mixin";
+
+.artm-list-item { position: relative; width: 100%; padding: 10px $padding; display: flex; font-size: $sizeMedium; line-height: 1.5;
+  &:before { @include border-top($borderColor, $padding)}
+  &:first-child {
+    &:before { display: none;}
+  }
+  &-icon { @include mm();
+    img { display: block; width: 20px; height: 20px; margin-right: 5px;}
+  }
+  &-cont { flex: 1; width: 0;
+    .title { color: $mainStrong;}
+    .desc { color: $main; font-size: $sizeNormal;}
+  }
+  &-after { position: relative; color: $mainWeak;; text-align: right;
+    .arrow { display: none; height: 6px; width: 6px; border-width: 2px 2px 0 0; border-color: $borderColor; border-style: solid; transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0); position: relative; top: -2px; position: absolute; top: 50%; margin-top: -4px; right: 2px; box-sizing: content-box;}
+  }
+
+}
+.artm-list-item-link {
+  .artm-list-item-after { padding-right: $padding;
+    .arrow { display: inline-block;}
+  }
+}

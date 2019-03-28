@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import
+    "../common/var",
+    "../common/mixin",
+    "../animation/_drawer";
+
+.artm-drawer { position: relative; display: flex; overflow: hidden;
+    &-sidebar { position: absolute; left: 0; top: 0; bottom: 0; background-color: $white; overflow: auto; z-index: 3; transform: translate(-100%, 0); transition: transform $animateTime;}
+    &-cont { flex: 1; width: 0; transition: all $animateTime;}
+    &-mask { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 2;}
+    &_open {
+        .artm-drawer-sidebar { transform: translate(0,0);}
+    }
+}
